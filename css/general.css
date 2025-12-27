@@ -1,0 +1,190 @@
+/********* RESET ************/
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/************ MENU ************/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+  height: 100px;
+  padding: 0px 20px;
+}
+
+.side-menu {
+  position: fixed; /* Fast på skærmen */
+  top: 50px; /* Hvor langt ned menuen starter */
+  right: 20px; /* Afstand fra højre kant */
+  z-index: 100; /* Ovenpå alt indhold */
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.side-menu ul {
+  display: flex;
+  flex-direction: column; /* Lodret liste */
+  gap: 20px; /* Afstand mellem links */
+  margin: 0; /* Fjern standard margin */
+  padding: 0; /* Fjern standard padding */
+  list-style: none; /* Ingen bullets */
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #e48300;
+  font-weight: 550;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.side-menu a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: overline;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #8c8c8c;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media (max-width: 800px) {
+  .side-menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+
+    background-color: transparent;
+    border: 0;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .side-menu {
+    display: block;
+    background-color: black;
+    text-decoration: white;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .side-menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .side-menu a {
+    font-size: 24px;
+  }
+}
+
+/***************  FOOTER *************/
+footer {
+  background-color: #0d0d0d;
+  height: 150px;
+}
+
+.color1 {
+  border-radius: 50%;
+  background-color: #737373;
+  height: 40px;
+  width: 40px;
+}
+.color2 {
+  border-radius: 50%;
+  background-color: #595959;
+  height: 40px;
+  width: 40px;
+}
+.color3 {
+  border-radius: 50%;
+  background-color: #404040;
+  height: 40px;
+  width: 40px;
+}
+.color4 {
+  border-radius: 50%;
+  background-color: #262626;
+
+  height: 40px;
+  width: 40px;
+}
+.color5 {
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  border: 2px solid #737373;
+  height: 40px;
+  width: 40px;
+}
+.color6 {
+  border-radius: 50%;
+  background-color: #e48300;
+  height: 40px;
+  width: 40px;
+}
+
+.Cirkles_collected {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.Cirkel_logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #262626;
+  border: 2px solid white;
+  display: flex;
+  justify-content: start;
+  margin-left: auto;
+}
