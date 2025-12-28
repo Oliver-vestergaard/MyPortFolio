@@ -11,6 +11,59 @@ img {
   display: block;
 }
 
+body {
+  background-color: #0d0d0d;
+}
+/******** FONTS ********/
+h1 {
+  font-family: "Baskervville", serif;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  color: #e48300;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  color: #e48300;
+}
+
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+}
+
+ul {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+}
+
+a {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+}
+
 /************ MENU ************/
 
 header {
@@ -29,11 +82,6 @@ header {
   top: 50px; /* Hvor langt ned menuen starter */
   right: 20px; /* Afstand fra højre kant */
   z-index: 100; /* Ovenpå alt indhold */
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
 }
 
 .side-menu ul {
@@ -182,9 +230,20 @@ footer {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #262626;
+  background-color: transparent;
   border: 2px solid white;
   display: flex;
   justify-content: start;
   margin-left: auto;
+}
+
+/********** DESKTOP ***********/
+
+@media (min-width: 801px) {
+  body {
+    background-image: url(../img/Backpic_opacity_down.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
