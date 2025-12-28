@@ -1,0 +1,63 @@
+/********* Scroll **********/
+@keyframes slideprogress {
+  from {
+    scale: 0 1;
+  }
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  block-size: 4px;
+  background-color: #e48300;
+  opacity: 0.6;
+
+  animation: slideprogress linear;
+  transform-origin: 0;
+  animation-timeline: scroll();
+}
+
+/********** FORSIDE ANIMATION *********/
+
+body.eye-zoom {
+  animation: eyeZoom 2s ease forwards;
+}
+
+/* Keyframes — zoom ind */
+@keyframes eyeZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3.15);
+  }
+}
+
+/*********** GRID ************/
+
+.slowHide {
+  animation: slowHide 4s ease both;
+}
+
+@keyframes slowHide {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.toRight {
+  animation: toRight 2s linear forwards;
+}
+
+@keyframes toRight {
+  0% {
+    transform: translatex(0);
+  }
+  100% {
+    transform: translatex(200vw);
+  }
+}

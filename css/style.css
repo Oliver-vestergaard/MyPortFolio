@@ -1,3 +1,118 @@
 .Forside_svg {
   margin-top: -95px;
 }
+
+.hide {
+  display: none;
+}
+/*********** BILLEDER ***********/
+.portræt_img {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+}
+
+/************** KNAPPER ***********/
+.button_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
+  height: 80px;
+
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  border-color: #595959;
+  border-radius: 50%;
+  cursor: pointer;
+
+  box-shadow: 0 0 40px 10px #e48300;
+
+  transform: translate(0, -200%);
+}
+
+#seeWork {
+  margin: 0 auto;
+}
+
+.button_main:hover {
+  box-shadow: 0 0 30px #ffffff;
+  backdrop-filter: blur(20px);
+  transform: scale(1.05);
+  transform: translate(0, -200%);
+}
+
+/************ INFO BOXE ***********/
+
+.infoBox {
+  position: relative;
+  background: linear-gradient(rgba(115, 115, 115, 0.05), rgba(228, 131, 0, 0.05));
+  border-radius: 10px;
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.text_cirkel_orange {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e48300;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+.infoBox_text {
+  padding: 5px;
+  margin: 5px;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+/************ Section Divider ***********/
+.Section_divider {
+  width: 300px;
+  height: 2px;
+  background-color: #e48300;
+  margin: 20px auto;
+}
+
+/************* Text afsnit *************/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/************** Baggrundsbillede **************/
+
+/* desktop */
+@media (min-width: 801px) {
+  body {
+    background-attachment: fixed;
+  }
+  .button_main {
+    width: 150px;
+    height: 150px;
+    transform: translate(0, -245%);
+  }
+  .button_main:hover {
+    transform: translate(0, -245%);
+  }
+}
+
+/* mobil */
+@media (max-width: 800px) {
+  body {
+    background-attachment: scroll;
+  }
+}
