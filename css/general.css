@@ -17,11 +17,12 @@ body {
 /******** FONTS ********/
 h1 {
   font-family: "Baskervville", serif;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: normal;
   font-style: normal;
   color: #e48300;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -30,6 +31,7 @@ h2 {
   font-weight: normal;
   font-style: normal;
   color: #e48300;
+  text-align: center;
 }
 
 h3 {
@@ -38,6 +40,7 @@ h3 {
   font-weight: normal;
   font-style: normal;
   color: white;
+  padding-left: 20px;
 }
 
 p {
@@ -46,9 +49,13 @@ p {
   font-weight: normal;
   font-style: normal;
   color: #fff;
+  padding-left: 20px;
+  max-width: 65ch;
+  line-height: 1.6;
 }
 
 ul {
+  padding-left: 30px;
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: normal;
@@ -245,5 +252,19 @@ footer {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+  }
+  h1 {
+    font-size: 200px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
   }
 }

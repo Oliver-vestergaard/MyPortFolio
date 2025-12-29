@@ -2,8 +2,6 @@ window.addEventListener("scroll", hideGitter);
 function hideGitter() {
   console.log("der scrolles");
   document.querySelector("#Gitter").classList.add("slowHide");
-  document.querySelector("#path_1").classList.add("toRight");
-  document.querySelector("#path_2").classList.add("toLeft");
 }
 
 const btn = document.querySelector("#seeWork");

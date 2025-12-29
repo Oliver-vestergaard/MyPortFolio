@@ -7,9 +7,25 @@
 }
 /*********** BILLEDER ***********/
 .portræt_img {
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
-  margin: 20px auto;
+  margin: 1.25rem auto;
+}
+
+.tema_imgs {
+  width: 300px;
+  height: auto;
+  margin: 1.25rem auto;
+}
+
+.project_img {
+  width: 200px;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 10px #e48300;
+  border-color: #595959;
 }
 
 /************** KNAPPER ***********/
@@ -39,18 +55,21 @@
 
 .button_main:hover {
   box-shadow: 0 0 30px #ffffff;
-  backdrop-filter: blur(20px);
-  transform: scale(1.05);
-  transform: translate(0, -200%);
+  background-color: transparent;
+  transform: translate(0, -200%) scale(1.05);
 }
 
 /************ INFO BOXE ***********/
+.tema_img_text_container {
+  margin-bottom: 60px;
+}
 
 .infoBox {
   position: relative;
   background: linear-gradient(rgba(115, 115, 115, 0.05), rgba(228, 131, 0, 0.05));
   border-radius: 10px;
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
   margin: 20px auto;
 }
@@ -68,10 +87,6 @@
 .infoBox_text {
   padding: 5px;
   margin: 5px;
-}
-
-ul {
-  padding-left: 30px;
 }
 
 /************ Section Divider ***********/
@@ -93,6 +108,20 @@ ul {
   margin-bottom: 30px;
 }
 
+.infoText_projects {
+  padding-left: 75px;
+  padding-right: 75px;
+  margin-bottom: 75px;
+}
+
+.tema h3 {
+  padding-left: 75px;
+  margin-bottom: 20px;
+}
+.tema {
+  margin-bottom: 60px;
+}
+
 /************** Baggrundsbillede **************/
 
 /* desktop */
@@ -103,10 +132,26 @@ ul {
   .button_main {
     width: 150px;
     height: 150px;
-    transform: translate(0, -245%);
+    transform: translate(0, -250%);
   }
   .button_main:hover {
-    transform: translate(0, -245%);
+    transform: translate(0, -250%) scale(1.05);
+  }
+
+  /************ TEKST ***********/
+
+  .project_h3 {
+    color: #e48300;
+  }
+
+  .infoText_projects {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /********** BILLEDER ************/
+  .project_img {
+    width: 350px;
   }
 }
 
