@@ -61,3 +61,31 @@ body.eye-zoom {
     transform: translatex(200vw);
   }
 }
+
+/********** BAGGRUND opacity *********/
+
+.opacity_down {
+  animation: opacityDown 5s linear forwards;
+}
+@keyframes opacityDown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/******** Præsentation af billeder ************/
+
+@keyframes SlideIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.tema_imgs {
+  animation: SlideIn ease-out both;
+  animation-timeline: view();
+  animation-range: 0% 40%;
+}

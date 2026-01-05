@@ -1,4 +1,4 @@
-window.addEventListener("scroll", hideGitter);
+document.querySelector(".Forside_svg").addEventListener("mouseover", hideGitter);
 function hideGitter() {
   console.log("der scrolles");
   document.querySelector("#Gitter").classList.add("slowHide");

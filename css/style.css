@@ -5,18 +5,25 @@
 .hide {
   display: none;
 }
+
 /*********** BILLEDER ***********/
+
+.portræt_img_container {
+  margin: 1.25rem 5rem;
+}
 .portræt_img {
-  max-width: 250px;
+  display: block;
   width: 100%;
   height: auto;
-  margin: 1.25rem auto;
+  max-width: 100%;
 }
 
 .tema_imgs {
-  width: 300px;
+  max-width: 300px; /* stopper på store skærme */
   height: auto;
-  margin: 1.25rem auto;
+  display: block;
+  margin: 0 auto; /* centrerer billeder */
+  margin-bottom: 3rem;
 }
 
 .project_img {
@@ -26,8 +33,12 @@
   border-radius: 50%;
   box-shadow: 0 0 40px 10px #e48300;
   border-color: #595959;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
-
+.project_img:hover {
+  filter: grayscale(0%);
+}
 /************** KNAPPER ***********/
 .button_main {
   display: flex;
@@ -59,19 +70,48 @@
   transform: translate(0, -200%) scale(1.05);
 }
 
-/************ INFO BOXE ***********/
-.tema_img_text_container {
-  margin-bottom: 60px;
+.Project_button {
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 10px #e48300;
+  width: fit-content;
+  padding: 0.5rem;
+  text-decoration: none;
+
+  align-items: center;
+  cursor: pointer;
+
+  margin: 1rem auto 5rem;
 }
 
+.Project_button:hover {
+  box-shadow: 0 0 30px #ffffff;
+  background-color: transparent;
+}
+
+/************ INFO BOXE ***********/
+
 .infoBox {
-  position: relative;
-  background: linear-gradient(rgba(115, 115, 115, 0.05), rgba(228, 131, 0, 0.05));
   border-radius: 10px;
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
+  width: fit-content;
+  margin: 20px 5rem;
+}
+
+.infoBox_text {
+  padding: 5px;
+  margin: 5px;
+}
+
+.infoBox li {
+  padding: 5px;
+}
+
+.infobox_h2 {
+  color: #fff;
+  font-size: 20px;
 }
 
 .text_cirkel_orange {
@@ -84,42 +124,42 @@
   vertical-align: bottom;
 }
 
-.infoBox_text {
-  padding: 5px;
-  margin: 5px;
-}
-
 /************ Section Divider ***********/
 .Section_divider {
-  width: 300px;
   height: 2px;
-  background-color: #e48300;
-  margin: 20px auto;
+  background: linear-gradient(to right, rgba(228, 131, 0, 0), #e48300, rgba(228, 131, 0, 0));
+
+  margin: 20px 5rem;
 }
 
 /************* Text afsnit *************/
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
 .infoText_projects {
-  padding-left: 75px;
-  padding-right: 75px;
-  margin-bottom: 75px;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-bottom: 3rem;
 }
 
-.tema h3 {
-  padding-left: 75px;
+.tema h2 {
+  padding-left: 6rem;
   margin-bottom: 20px;
 }
 .tema {
   margin-bottom: 60px;
+}
+
+.Project_h3 {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/********* VIDEO *********/
+
+.Meta_video {
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+  z-index: -10;
 }
 
 /************** Baggrundsbillede **************/
@@ -129,6 +169,14 @@
   body {
     background-attachment: fixed;
   }
+
+  main:not(.Homepage) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  /************ BUTTONS *********/
+
   .button_main {
     width: 150px;
     height: 150px;
@@ -137,27 +185,141 @@
   .button_main:hover {
     transform: translate(0, -250%) scale(1.05);
   }
+  .Project_button {
+    font-size: 20px;
+  }
 
   /************ TEKST ***********/
 
-  .project_h3 {
+  .project_h2 {
     color: #e48300;
+  }
+  .Project_h3 {
+    margin-bottom: 2rem;
+    padding-left: 0;
+  }
+
+  .infoBox {
+    margin: 0;
+
+    height: fit-content;
+    background: linear-gradient(rgba(115, 115, 115, 0.09), rgba(228, 131, 0, 0.09));
+  }
+
+  .tema_img_text_container {
+    margin-bottom: 5rem;
+  }
+
+  .tema_h2 {
+    padding: 0 0 0 6rem;
   }
 
   .infoText_projects {
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 0 0 6rem;
+    margin-bottom: 50vh;
+  }
+
+  .contact {
+    align-items: start;
   }
 
   /********** BILLEDER ************/
+  .portræt_img_container {
+    margin: 0;
+  }
   .project_img {
     width: 350px;
+  }
+
+  .tema_imgs {
+    width: auto; /* Brug billedets naturlige bredde */
+    max-width: none; /* Fjern begrænsning */
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /*********** VIDEO **********/
+  .Meta_video {
+    opacity: 0.5;
+    width: 100vw;
+    height: auto;
+  }
+
+  /************** ANDRE SMÅ ELEMENTER ************/
+  .Section_divider {
+    margin: 3rem 0;
+  }
+  .Section_divider_projects {
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, rgba(228, 131, 0, 0), #e48300, rgba(228, 131, 0, 0));
+    margin: 3rem 0;
+  }
+
+  .text_cirkel_orange {
+    width: 30px;
+    height: 30px;
+  }
+
+  .moon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+
+    box-shadow: 0 -1px 0 1px #ff9800;
+  }
+
+  /*********** HOVERS ***********&
+
+
+
+  /*********** GRIDS *************/
+  /* ABOUT GRID*/
+
+  /*
+  .container_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .container_left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .container_left .tema_imgs {
+    grid-column: 1;
+  }
+
+  .container_left .left_content {
+    grid-column: 2;
+  }
+
+/**
+
+
+
+
+
+  /*
+  .tema_img_text_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+  .tema_imgs {
+    grid-column: 2/3;
+    grid-row: 1/4;
   }
 }
 
 /* mobil */
-@media (max-width: 800px) {
-  body {
-    background-attachment: scroll;
+  @media (max-width: 800px) {
+    body {
+      background-attachment: scroll;
+    }
   }
 }

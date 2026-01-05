@@ -31,7 +31,7 @@ h2 {
   font-weight: normal;
   font-style: normal;
   color: #e48300;
-  text-align: center;
+  padding-left: 6rem;
 }
 
 h3 {
@@ -39,7 +39,7 @@ h3 {
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
-  color: white;
+  color: #c4c4c4;
   padding-left: 20px;
 }
 
@@ -48,7 +48,7 @@ p {
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
-  color: #fff;
+  color: #c4c4c4;
   padding-left: 20px;
   max-width: 65ch;
   line-height: 1.6;
@@ -60,7 +60,7 @@ ul {
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
-  color: #fff;
+  color: #c4c4c4;
 }
 
 a {
@@ -181,8 +181,8 @@ header {
 
 /***************  FOOTER *************/
 footer {
-  background-color: #0d0d0d;
   height: 150px;
+  background: linear-gradient(to top, #0d0d0d 60%, rgba(0, 0, 0, 0));
 }
 
 .color1 {
@@ -247,14 +247,27 @@ footer {
 /********** DESKTOP ***********/
 
 @media (min-width: 801px) {
-  body {
+  .hero_background {
+    position: fixed; /* baggrunden ligger fast */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* fylder hele viewport */
+    background-image: url(../img/Backpic_opacity_down.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* bag alt indhold */
+  }
+
+  .frontpage {
     background-image: url(../img/Backpic_opacity_down.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
+
   h1 {
-    font-size: 200px;
+    font-size: 150px;
   }
 
   h2 {
@@ -265,6 +278,9 @@ footer {
     font-size: 32px;
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  ul {
+    font-size: 16px;
   }
 }
